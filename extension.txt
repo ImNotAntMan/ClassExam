@@ -1,0 +1,10 @@
+Auto Rename Tag
+css peek
+bracket pair colorizer
+Material Theme
+Material Theme icon
+html css support
+html snippets
+indent rainbow
+live server
+Prettier - Code formatter
