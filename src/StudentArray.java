@@ -13,11 +13,11 @@ public class StudentArray {
 		st1[5] = new Student("Á¿¾¾");
 		
 		for(int i = 0  ; i < st1.length ; i++) {
-			st1[i].showSutdent();
+			st1[i].showStudent();
 		}
 		
 		for(int i = st1.length - 1; i >= 0; i--) {
-			st1[i].showSutdent();
+			st1[i].showStudent();
 		}
 
 	}

@@ -48,7 +48,7 @@ public class Student {
 		this.address = address;
 	}
 	
-	public void showSutdent() {
+	public void showStudent() {
 		System.out.println(getStudentId() + " : " + getStudentName());
 	}
 	
