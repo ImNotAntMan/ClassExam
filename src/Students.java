@@ -26,13 +26,17 @@ public class Students {
 	
 	public void showStudentInfo() {
 		int total = 0;
+		int i = 0;
 		System.out.println(this.studentName + " : " + this.studentID + " ");
 		for(Subject s : this.subjectList) {	// 저장된 원소 수만큼 반복
+			i++;
 			total += s.getScorePoint();	// 총점 누적
 			System.out.print(s.getName() + " : " + s.getScorePoint() + " ");
 		}
 		System.out.println();
+		System.out.println("과목수 : " + i);
 		System.out.println("총점 : " + total);
+		System.out.println("평균 : " + (double)total / i);
 		System.out.println("=================================");
 		
 	}

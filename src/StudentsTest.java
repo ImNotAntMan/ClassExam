@@ -11,10 +11,17 @@ public class StudentsTest {
 		student2.addSubject("국어", 70);
 		student2.addSubject("영어", 93);
 		student2.addSubject("수학", 81);
+
+		Students student3= new Students(1003, "한국인");
+		student3.addSubject("국어", 95);
+		student3.addSubject("영어", 93);
+		student3.addSubject("수학", 89);
+		student3.addSubject("물리", 79);
+		student3.addSubject("화학", 69);
 		
 		student1.showStudentInfo();
 		student2.showStudentInfo();
-
+		student3.showStudentInfo();
 	}
 
 }
