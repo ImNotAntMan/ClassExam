@@ -1,9 +1,9 @@
 
 public class Product {
-	private String productName;
-	private int unitRentPrice;
-	private int qty;
-	private String discountRate; //Dog 5, Cow 10, Cat 20, vat 면세 ㅋㅋㅋㅋ
+	private String productName;	// 상품명
+	private int unitRentPrice;	// 단가
+	private int qty;	//수량
+	private String discountRate; // 할인비율 : Dog 5, Cow 10, Cat 20 ㅋㅋㅋㅋ
 	
 //	public Product(String productName, int unitRentPrice, int qty,  String discountRate) {
 //		this.productName = productName;

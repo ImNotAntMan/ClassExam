@@ -10,15 +10,15 @@ public class RentTest {
 
 		RentProduct rentProduct2 = new RentProduct("윤석열", 5555);
 		rentProduct2.addProductList("소주", 3000, 9, "dog");
-		rentProduct2.addProductList("삼겹살12인분", 12000, 11, "dog");
-		rentProduct2.addProductList("삼겹살12인분", 120000, 11, "dog");
+		rentProduct2.addProductList("삼겹살 12인분", 12000, 11, "dog");
+		rentProduct2.addProductList("소고기 12인분", 32000, 11, "dog");
 
 		RentProduct rentProduct3 = new RentProduct("이재명", 2222);
-		rentProduct3.addProductList("소주대병", 13000, 2, "dog");
-		rentProduct3.addProductList("식탁", 63000, 1, "dog");
-		rentProduct3.addProductList("갤럭시22", 930000, 1, "dog");
-		rentProduct3.addProductList("의자", 300000, 1, "dog");
-		rentProduct3.addProductList("마우스", 30000, 1, "dog");
+		rentProduct3.addProductList("소주대병", 13000, 2, "cow");
+		rentProduct3.addProductList("식탁", 63000, 1, "cow");
+		rentProduct3.addProductList("갤럭시22", 930000, 1, "cow");
+		rentProduct3.addProductList("의자", 300000, 1, "cow");
+		rentProduct3.addProductList("마우스", 30000, 1, "cow");
 
 		RentProduct rentProduct4 = new RentProduct("이동형", 1111);
 		rentProduct4.addProductList("보해소주", 3000, 7, "dog");
