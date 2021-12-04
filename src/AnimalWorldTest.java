@@ -4,7 +4,7 @@ public class AnimalWorldTest {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		AnimalWorldTest a = new AnimalWorldTest();
+		AnimalWorldTest a = new AnimalWorldTest();	// 왜 a라는 것을 생성했을까?
 		AnimalWorld ani1 = new Humans(); // 상속을 받자!!!
 		AnimalWorld ani2 = new Tigers();
 		AnimalWorld ani3 = new Eagles();
