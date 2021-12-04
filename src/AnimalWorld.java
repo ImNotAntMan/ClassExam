@@ -19,7 +19,6 @@ class Humans extends AnimalWorld {	// 습관적으로 맨 앞에 public을 적었더니 에러�
 	}
 	public void readBook() {
 		System.out.println("사람이 책을 읽는다고?");
-		
 	}
 	public void move2() {
 		System.out.println("사람이 타이거도 먹고 싶어 합니다.");
