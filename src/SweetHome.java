@@ -12,9 +12,8 @@ public class SweetHome {
 	private int ownerID;	// 소유자 고유번호
 	private String homeAddress;	// 집 주소
 	private int housePrice;	// 집 가격
-	private ArrayList<SweetHome> shList;
 	
-	public SweetHome() {	// 개,소도 아는 생성자
+	public SweetHome() {
 		
 	}
 	
@@ -23,9 +22,9 @@ public class SweetHome {
 		this.ownerID = ownerID;
 		this.homeAddress = homeAddress;
 		this.housePrice = housePrice;
-		shList = new ArrayList<SweetHome>();
 	}
 	
+
 	public void homeAction(int i) {
 		System.out.println("집이 움직이는게 아닙니다.");
 	}
