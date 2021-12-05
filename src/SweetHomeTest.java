@@ -126,9 +126,10 @@ public class SweetHomeTest {
 		} 
 		// 결국 이것은 자바에서 if 문의 특징을 보여주는 것이다. 맨 처음, 혹은 맨 위의 조건문을
 		// 만족하면(true) 다음 조건문은 실행 안하고 if문을 빠져 나온다.
-		// 특히 위에 있는 조건문 "if(list instanceof SweetHome) {"이 항상 true인 것은 BedRoom, Kitchen, DressRoom,
-		// StudyRoom, GameRoom 자식 클래스 모두가 부모인 SweetHome 클래스를 상속하고 있기에 당연히 list가  
-		// "if(list instanceof SweetHome) {" 하면 자식 클래스도 당연히 SweetHome의 인스턴스이다.
+		// 그리고 위에 있는 조건문 "if(list instanceof SweetHome) {"이 list가 무엇이든 상관없이 항상
+		//  true인 것은 BedRoom, Kitchen, DressRoom, StudyRoom, GameRoom 자식 클래스 모두가 
+		// 부모인 SweetHome 클래스를 상속하고 있기에 당연히 자식 클래스들 모두는 
+		// SweetHome의 속성을 가지고 있다.
 
 		
 //		bedroom.homeAction(4);
