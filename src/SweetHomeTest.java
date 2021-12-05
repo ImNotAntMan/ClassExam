@@ -64,34 +64,9 @@ public class SweetHomeTest {
 		SweetHome gameroom = new GameRoom();
 		gameroom.homeAction(4);
 		System.out.println("================================================");
-
-		// 다운 캐스팅 연습!!
-		// super(SweetHome)이 if 문 제일 앞에 오면 다운 캐스팅이 되지 않는다.else 위에 있으면 정상 작동한다. ㅡㅡ;;
-//		for(int i = 0; i < shList.size(); i++) {
-//			SweetHome list = shList.get(i);
-//		 if(list instanceof SweetHome) { // 제일앞에 SweetHome???
-//			System.out.print("이름은 " + shList.get(i).getOwnerName() + "이고 번호는 " + shList.get(i).getOwnerID() + "입니다. " + "사는 곳은 " + shList.get(i).getHomeAddress() + "이며 집 값은 " + shList.get(i).getHousePrice() + "억원 입니다.\n");
-//				list.taxHouse(); // 이게 실행된후에 자식 클래스들은 무조건 .taxHouse()실행함.
-//			} else if(list instanceof BedRoom) {
-//				BedRoom b = (BedRoom)list;
-//				b.bedRoomAction(); // taxHouse() 실행됨...?????
-//			} else if(list instanceof DressRoom) {
-//				DressRoom d = (DressRoom)list;
-//				d.dressRommAction();
-//			} else if(list instanceof Kitchen) {
-//				Kitchen k = (Kitchen)list;
-//				k.kitchenAction();
-//			} else if(list instanceof StudyRoom) {
-//				StudyRoom s = (StudyRoom)list;
-//				s.studyRoomAction();
-//			} else if(list instanceof GameRoom) {
-//				GameRoom g = (GameRoom)list;
-//				g.gameRoomAction();
-//			} else {
-//				System.out.println("알수 없는 오류입니다.");	
-//			}
-//		}
-//		
+		
+		// if(list instanceof SweetHome) <= 이놈이 맨 앞에 오지 않게 하자. 맨 끝에 오게 하자!!! 이유는??
+		// 그리고 형변환은 부모와 자손간의 관계에서만 가능하다.
 		System.out.println("다운 캐스팅 연습!!");
 		System.out.println("================================================");
 		for(int i = 0; i < shList.size(); i++) {
@@ -112,12 +87,42 @@ public class SweetHomeTest {
 				GameRoom g = (GameRoom)list;
 				g.gameRoomAction();
 				System.out.println("");
-			} else if(list instanceof SweetHome) { // SweetHome: 이름, ID, 주소, 가격이 저장된 클래스
+			} else if(list instanceof SweetHome) { // 클래스 SweetHome: 이름, ID, 주소, 가격이 저장된 클래스
 				System.out.print("이름은 " + list.getOwnerName() + "이고 번호는 " + list.getOwnerID() + "입니다. " + "사는 곳은 " + list.getHomeAddress() + "이며 집 값은 " + list.getHousePrice() + "억원 입니다.\n");
 			} else {
 				System.out.println("알수 없는 오류입니다.");
 			}
 		}
+		
+		System.out.println("======================================================================================================");
+		
+		// if(list instanceof SweetHome) <= 이놈이 맨 앞에 오지 않게 하자. 맨 끝에 오게 하자!!! 이유는??
+		// 그리고 형변환은 부모와 자손간의 관계에서만 가능하다.
+		System.out.println("부모 클래스가 맨 앞에 있을 때 다운 캐스팅! 위에서 실행한 결과와 지금 결과 비교해 보자! 왜 이럴까???");
+		System.out.println("======================================================================================================");
+		for(int i = 0; i < shList.size(); i++) {
+			SweetHome list = shList.get(i);
+			if(list instanceof SweetHome) { // list의 속성타입 SweetHome이면 .........
+				System.out.print("이름은 " + list.getOwnerName() + "이고 번호는 " + list.getOwnerID() + "입니다. " + "사는 곳은 " + list.getHomeAddress() + "이며 집 값은 " + list.getHousePrice() + "억원 입니다.\n");
+			} else if(list instanceof BedRoom) {
+				BedRoom b = (BedRoom)list;
+				b.bedRoomAction();
+			} else if(list instanceof DressRoom) {
+				DressRoom d = (DressRoom)list;
+				d.dressRommAction();
+			} else if(list instanceof Kitchen) {
+				Kitchen k = (Kitchen)list;
+				k.kitchenAction();
+			} else if(list instanceof StudyRoom) {
+				StudyRoom s = (StudyRoom)list;
+				s.studyRoomAction();
+			} else if(list instanceof GameRoom) {
+				GameRoom g = (GameRoom)list;
+				g.gameRoomAction();
+				System.out.println("");
+			}
+		}
+
 		
 //		bedroom.homeAction(4);
 //		dressroom.homeAction(1);
@@ -126,7 +131,7 @@ public class SweetHomeTest {
 //		gameroom.homeAction(3);
 //		gameroom.homeAction(1);
 //		gameroom.homeAction(2);
-		System.out.println("========================================");
+		System.out.println("==========================================================================================================");
 
 	}
 

@@ -2,9 +2,9 @@
 // 부모 클래스(SweetHome)는 멤버 변수Name, ID, Address, HousePrice.
 // 자식 클래스는 BedRoom(일어난다), Kitchen(요리, 설거지, 식사), DressRoom(빨래, 말리는),
 // StudyRoom(공부, 영화), GameRoom(게임)으로 구성
-// 자식 클래스는 오늘 할 일을 구성하는데 부모 자식에 있는 homeAction 메소드를 오버라이딩(오버로딩 아 할 것.
+// 자식 클래스는 오늘 할 일을 구성하는데 부모 자식에 있는 멤버변수를 사용하고, homeAction() 메소드를 오버라이딩(오버로딩 아님) 할 것.
 // 일어나서, 밥 먹고, 옷 갈아입고, 공부하고, 논다.(BedRoom, Kitchen, DressRoom, SturyRoom, GameRoom)
-// 할 일들에 대한 구성은 사람마다 틀리므로 ArrayList에 저장한다.(만들었지만 의도에 불분명하다.)
+// 할 일들에 대한 구성은 사람마다 틀리므로 ArrayList에 저장한다.(만들었지만 의도에 정확하게 맞지 않았다.)
 // 다운 캐스팅을 구현할 수 있도록 자식 클래스에 다른 메소드를 만들어 다운 캐스팅으로 호출할 것.
 public class SweetHome {
 	
