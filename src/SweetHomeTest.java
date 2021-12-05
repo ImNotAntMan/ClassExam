@@ -104,24 +104,31 @@ public class SweetHomeTest {
 			SweetHome list = shList.get(i);
 			if(list instanceof SweetHome) { // list의 속성타입 SweetHome이면 .........
 				System.out.print("이름은 " + list.getOwnerName() + "이고 번호는 " + list.getOwnerID() + "입니다. " + "사는 곳은 " + list.getHomeAddress() + "이며 집 값은 " + list.getHousePrice() + "억원 입니다.\n");
-			} else if(list instanceof BedRoom) {
+			} else if(list instanceof BedRoom) { // 이건 SweetHome의 System.out.print("이름은 " + list.getOwnerName()....);이 실행됬다는건데.. 
 				BedRoom b = (BedRoom)list;
 				b.bedRoomAction();
-			} else if(list instanceof DressRoom) {
+			} else if(list instanceof DressRoom) { // 이건 SweetHome의 System.out.print("이름은 " + list.getOwnerName()....);이 실행됬다는건데..
 				DressRoom d = (DressRoom)list;
 				d.dressRommAction();
-			} else if(list instanceof Kitchen) {
+			} else if(list instanceof Kitchen) { // 이건 SweetHome의 System.out.print("이름은 " + list.getOwnerName()....);이 실행됬다는건데..
 				Kitchen k = (Kitchen)list;
 				k.kitchenAction();
-			} else if(list instanceof StudyRoom) {
+			} else if(list instanceof StudyRoom) { // 이건 SweetHome의 System.out.print("이름은 " + list.getOwnerName()....);이 실행됬다는건데..
 				StudyRoom s = (StudyRoom)list;
 				s.studyRoomAction();
-			} else if(list instanceof GameRoom) {
+			} else if(list instanceof GameRoom) { // 이건 SweetHome의 System.out.print("이름은 " + list.getOwnerName()....);이 실행됬다는건데..
 				GameRoom g = (GameRoom)list;
 				g.gameRoomAction();
 				System.out.println("");
+			} else {
+				System.out.println("알수 없는 오류입니다.");
 			}
-		}
+		} 
+		// 결국 이것은 자바에서 if 문의 특징을 보여주는 것이다. 맨 처음, 혹은 맨 위의 조건문을
+		// 만족하면(true) 다음 조건문은 실행 안하고 if문을 빠져 나온다.
+		// 특히 위에 있는 조건문 "if(list instanceof SweetHome) {"이 항상 true인 것은 BedRoom, Kitchen, DressRoom,
+		// StudyRoom, GameRoom 자식 클래스 모두가 부모인 SweetHome 클래스를 상속하고 있기에 당연히 list가  
+		// "if(list instanceof SweetHome) {" 하면 자식 클래스도 당연히 SweetHome의 인스턴스이다.
 
 		
 //		bedroom.homeAction(4);
