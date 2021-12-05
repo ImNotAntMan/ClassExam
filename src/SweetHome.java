@@ -14,7 +14,8 @@ public class SweetHome {
 	private int housePrice;	// 집 가격
 	
 	public SweetHome() {
-		// 빈 생성자(empty constructor)가 없이 자식 클래스를 호출하니(a = new BedRoom() 이런거..) 에러를 낸다. 꼭 만들자!
+		// 빈 생성자(empty constructor)가 없이 자식 클래스를 호출하니(a = new BedRoom() 이런거..) 에러를 낸다. 
+		// 꼭 만들자!
 		// Implicit super constructor SweetHome() is undefined for default constructor. 
 		// Must define an explicit constructor
 		
@@ -28,8 +29,8 @@ public class SweetHome {
 	}
 	
 	// 오버로딩의 정의는 자바의 한 클래스 내에 이미 사용하려는 이름과 같은 이름을 가진 메소드가 있더라도 매개변수의 개수 또는 타입이 다르면, 같은 이름을 사용해서 메소드를 정의할 수 있다.
-	// 부모 클래스로부터 상속받은 메소드를 자식 클래스에서 재정의하는 것을 오버라이딩이라고 한다.
-	public void homeAction(int i) { // 자식 클래스에서 이 메소드를 오버라이딩한다.
+	// 오버라이딩은 부모 클래스로부터 상속받은 메소드를 자식 클래스에서 재정의하는 것이라고 한다.
+	public void homeAction(int i) { // 자식 클래스에서 이 메소드를 오버라이딩한다. 이름과 매개변수가 같아야 한다.
 		System.out.println("SweetHome에서 homeAction()이 호출되었습니다.");
 	}
 	
