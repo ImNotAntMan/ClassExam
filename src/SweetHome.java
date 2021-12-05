@@ -14,7 +14,7 @@ public class SweetHome {
 	private int housePrice;	// 집 가격
 	
 	public SweetHome() {
-		// 빈 생성자(empty constructor)가 없으니까 자식 클래스를 호출하니(a = new BedRoom() 이런거..) 에러를 낸다. 꼭 만들자!
+		// 빈 생성자(empty constructor)가 없이 자식 클래스를 호출하니(a = new BedRoom() 이런거..) 에러를 낸다. 꼭 만들자!
 		// Implicit super constructor SweetHome() is undefined for default constructor. 
 		// Must define an explicit constructor
 		
