@@ -14,10 +14,10 @@ class Human extends Animals {
 		
 	}
 	public void move2() {
-		System.out.println("사람이 타이거도 먹고 싶어 합니다.");
+		System.out.println("사람이 호랑이도 먹고 싶어 합니다.");
 	}
 	public void heist() {
-		System.out.println("너무 처 드시면 안됩니다.");
+		System.out.println("너무 많이 드시면 안됩니다.");
 	}
 }
 
@@ -26,16 +26,16 @@ class Tiger extends Animals {
 		System.out.println("타이거가 사람을 먹고 있습니다.");
 	}
 	public void hunting() {
-		System.out.println("호랑이가 사냥을 한다.");
+		System.out.println("호랑이가 사냥을 합니다.");
 	}
 }
 
 class  Eagle extends Animals {
 	public void move( ) {
-		System.out.println("이글이 타이거를 먹고 있습니다.");
+		System.out.println("독수리가 호랑이를 먹고 있습니다.");
 	}
 	public void flying() {
-		System.out.println("독수리 날다.!");
+		System.out.println("독수리 날다가 사람에 잡혀서 먹힙니다!\n천연기념물인 호랑이는 유유히 산책을 하면서 독수리를 비웃습니다.\n그런데 독수리도 천연기념물 아닌가?\n사람이 무안한지 ㅎㅎㅎ 웃습니다.");
 	}
 }
 
