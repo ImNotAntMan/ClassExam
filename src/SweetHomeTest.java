@@ -3,18 +3,18 @@ public class SweetHomeTest {
 
 	public static void main(String[] args) {
 		// 
-		SweetHome sh = new SweetHome("ÀÌ¸¸±â", 1001, "³»´öµ¿", 100);
+		SweetHome sh = new SweetHome("ì´ë§Œê¸°", 1001, "ë‚´ë•ë™", 100);
 		ArrayList<SweetHome> shList = new ArrayList<SweetHome>();
 
-		// shList.get()À» ÅëÇÏ¿© Á¢±ÙÇÏ´Â ¹æ¹ı
+		// shList.get()ì„ í†µí•˜ì—¬ ì ‘ê·¼í•˜ëŠ” ë°©ë²•
 		shList.add(sh);
 //		System.out.println(shList.get(0).getOwnerName());
 //		System.out.println(shList.get(0).getOwnerID());
 //		System.out.println(shList.get(0).getHomeAddress());
 //		System.out.println(shList.get(0).getHousePrice());
 //		System.out.println(shList.get(0).getHousePrice()*0.001);
-		// sh °´Ã¼¸¦ ÅëÇÏ¿© Á¢±ÙÇÏ´Â ¹æ¹ı
-		System.out.print("ÀÌ¸§Àº " + sh.getOwnerName() + "ÀÌ°í ¹øÈ£´Â " + sh.getOwnerID() + "ÀÔ´Ï´Ù. " + "»ç´Â °÷Àº " + sh.getHomeAddress() + "ÀÌ¸ç Áı °ªÀº " + sh.getHousePrice() + "¾ï¿ø ÀÔ´Ï´Ù.\n");
+		// sh ê°ì²´ë¥¼ í†µí•˜ì—¬ ì ‘ê·¼í•˜ëŠ” ë°©ë²•
+		System.out.print("ì´ë¦„ì€ " + sh.getOwnerName() + "ì´ê³  ë²ˆí˜¸ëŠ” " + sh.getOwnerID() + "ì…ë‹ˆë‹¤. " + "ì‚¬ëŠ” ê³³ì€ " + sh.getHomeAddress() + "ì´ë©° ì§‘ ê°’ì€ " + sh.getHousePrice() + "ì–µì› ì…ë‹ˆë‹¤.\n");
 
 		shList.add(new BedRoom());
 		shList.add(new Kitchen());
@@ -22,9 +22,9 @@ public class SweetHomeTest {
 		shList.add(new StudyRoom());
 		shList.add(new GameRoom());
 
-		SweetHome sh2 = new SweetHome("James Lee", 1002, "¼­¿ï", 250);
+		SweetHome sh2 = new SweetHome("James Lee", 1002, "ì„œìš¸", 250);
 		shList.add(sh2);
-		System.out.print("ÀÌ¸§Àº " + shList.get(6).getOwnerName() + "ÀÌ°í ¹øÈ£´Â " + shList.get(6).getOwnerID() + "ÀÔ´Ï´Ù. " + "»ç´Â °÷Àº " + shList.get(6).getHomeAddress() + "ÀÌ¸ç Áı °ªÀº " + shList.get(6).getHousePrice() + "¾ï¿ø ÀÔ´Ï´Ù.\n");
+		System.out.print("ì´ë¦„ì€ " + shList.get(6).getOwnerName() + "ì´ê³  ë²ˆí˜¸ëŠ” " + shList.get(6).getOwnerID() + "ì…ë‹ˆë‹¤. " + "ì‚¬ëŠ” ê³³ì€ " + shList.get(6).getHomeAddress() + "ì´ë©° ì§‘ ê°’ì€ " + shList.get(6).getHousePrice() + "ì–µì› ì…ë‹ˆë‹¤.\n");
 		shList.add(new BedRoom());
 		shList.add(new Kitchen());
 		shList.add(new DressRoom());
@@ -32,16 +32,16 @@ public class SweetHomeTest {
 		shList.add(new GameRoom());
 		
 		int j = 0;
-		// ´ÙÇü¼º Å×½ºÆ®
-		for(SweetHome slist : shList) { // ÀÌ for¹®ÀÇ ´ÜÁ¡Àº array¸¸ °¡´É.
-			System.out.print(" jÀÇ °ªÀº : " + j + "ÀÔ´Ï´Ù.");
-			System.out.print(slist.getClass() + " "); // getClass() : È£ÃâµÈ Å¬·¡½ºÀÇ ÀÌ¸§À» Ãâ·ÂÇÑ´Ù.
+		// ë‹¤í˜•ì„± í…ŒìŠ¤íŠ¸
+		for(SweetHome slist : shList) { // ì´ forë¬¸ì˜ ë‹¨ì ì€ arrayë§Œ ê°€ëŠ¥.
+			System.out.print(" jì˜ ê°’ì€ : " + j + "ì…ë‹ˆë‹¤.");
+			System.out.print(slist.getClass() + " "); // getClass() : í˜¸ì¶œëœ í´ë˜ìŠ¤ì˜ ì´ë¦„ì„ ì¶œë ¥í•œë‹¤.
 //			if(slist instanceof SweetHome) {
 //				System.out.println("");
-//				System.out.print("ÀÌ¸§Àº " + slist.getOwnerName() + "ÀÌ°í ¹øÈ£´Â " + slist.getOwnerID() + "ÀÔ´Ï´Ù. " + "»ç´Â °÷Àº " + slist.getHomeAddress() + "ÀÌ¸ç Áı °ªÀº " + slist.getHousePrice() + "¾ï¿ø ÀÔ´Ï´Ù.\n");			
+//				System.out.print("ì´ë¦„ì€ " + slist.getOwnerName() + "ì´ê³  ë²ˆí˜¸ëŠ” " + slist.getOwnerID() + "ì…ë‹ˆë‹¤. " + "ì‚¬ëŠ” ê³³ì€ " + slist.getHomeAddress() + "ì´ë©° ì§‘ ê°’ì€ " + slist.getHousePrice() + "ì–µì› ì…ë‹ˆë‹¤.\n");			
 //			}
-			slist.homeAction(j); // ´ÙÇü¼º: È£ÃâµÈ Å¬·¡½ºÀÇ ¿À¹ö¶óÀÌµù µÈ ¸Ş¼Òµå homeActionÀ» ½ÇÇàÇÑ´Ù.
-//			slist.homeAction(2); // jÀÇ °ªÀ» Á¶Á¤ÇÏ¸é ´Ù¸¥ ¿É¼ÇÀÌ Ãâ·ÂµÈ´Ù.
+			slist.homeAction(j); // ë‹¤í˜•ì„±: í˜¸ì¶œëœ í´ë˜ìŠ¤ì˜ ì˜¤ë²„ë¼ì´ë”© ëœ ë©”ì†Œë“œ homeActionì„ ì‹¤í–‰í•œë‹¤.
+//			slist.homeAction(2); // jì˜ ê°’ì„ ì¡°ì •í•˜ë©´ ë‹¤ë¥¸ ì˜µì…˜ì´ ì¶œë ¥ëœë‹¤.
 //			slist.homeAction(3);
 //			slist.homeAction(4);
 			++j;
@@ -51,12 +51,12 @@ public class SweetHomeTest {
 		}
 		
 		System.out.println("================================================");
-		System.out.println("ArrayLis »ç¿ë ¾È ÇÏ°í~~");
+		System.out.println("ArrayLis ì‚¬ìš© ì•ˆ í•˜ê³ ~~");
 		System.out.println("================================================");
-		SweetHome bedroom= new BedRoom();	// ArrayList¸¦ »ç¿ëÇÏÁö ¾Ê´Â ¹æ¹ı
-		bedroom.homeAction(3); // »ç½Ç ÀÌ°Ô ¸Â´Â °Í °°´Ù. Å¬·¡½º ¸¶´Ù ´Ù¸¥ Çàµ¿ÀÌ °¡´ÉÇÏ´Ï±î...
-		SweetHome kitchenroom = new Kitchen(); // ±×·¡¼­ ArrayList¸¦ »ç¿ëÇÒ±î ¸»±î´Ù..
-		kitchenroom.homeAction(2); // ±×·¯¸é ArrayList¿¡ ¸Å°³ º¯¼ö¸¦ Áà¼­ ¾î¶»°Ô ¾î¶»°Ô ÇÏ¸é ¾ÈµÉ±î?
+		SweetHome bedroom= new BedRoom();	// ArrayListë¥¼ ì‚¬ìš©í•˜ì§€ ì•ŠëŠ” ë°©ë²•
+		bedroom.homeAction(3); // ì‚¬ì‹¤ ì´ê²Œ ë§ëŠ” ê²ƒ ê°™ë‹¤. í´ë˜ìŠ¤ ë§ˆë‹¤ ë‹¤ë¥¸ í–‰ë™ì´ ê°€ëŠ¥í•˜ë‹ˆê¹Œ...
+		SweetHome kitchenroom = new Kitchen(); // ê·¸ë˜ì„œ ArrayListë¥¼ ì‚¬ìš©í• ê¹Œ ë§ê¹Œë‹¤..
+		kitchenroom.homeAction(2); // ê·¸ëŸ¬ë©´ ArrayListì— ë§¤ê°œ ë³€ìˆ˜ë¥¼ ì¤˜ì„œ ì–´ë–»ê²Œ ì–´ë–»ê²Œ í•˜ë©´ ì•ˆë ê¹Œ?
 		SweetHome dressroom = new DressRoom();
 		dressroom.homeAction(4);
 		SweetHome studyroom = new StudyRoom();
@@ -65,9 +65,9 @@ public class SweetHomeTest {
 		gameroom.homeAction(4);
 		System.out.println("================================================");
 		
-		// if(list instanceof SweetHome) <= ÀÌ³ğÀÌ ¸Ç ¾Õ¿¡ ¿ÀÁö ¾Ê°Ô ÇÏÀÚ. ¸Ç ³¡¿¡ ¿À°Ô ÇÏÀÚ!!! ÀÌÀ¯´Â??
-		// ±×¸®°í Çüº¯È¯Àº ºÎ¸ğ¿Í ÀÚ¼Õ°£ÀÇ °ü°è¿¡¼­¸¸ °¡´ÉÇÏ´Ù.
-		System.out.println("´Ù¿î Ä³½ºÆÃ ¿¬½À!!");
+		// if(list instanceof SweetHome) <= ì´ë†ˆì´ ë§¨ ì•ì— ì˜¤ì§€ ì•Šê²Œ í•˜ì. ë§¨ ëì— ì˜¤ê²Œ í•˜ì!!! ì´ìœ ëŠ”??
+		// ê·¸ë¦¬ê³  í˜•ë³€í™˜ì€ ë¶€ëª¨ì™€ ìì†ê°„ì˜ ê´€ê³„ì—ì„œë§Œ ê°€ëŠ¥í•˜ë‹¤.
+		System.out.println("ë‹¤ìš´ ìºìŠ¤íŒ… ì—°ìŠµ!!");
 		System.out.println("================================================");
 		for(int i = 0; i < shList.size(); i++) {
 			SweetHome list = shList.get(i);
@@ -87,49 +87,49 @@ public class SweetHomeTest {
 				GameRoom g = (GameRoom)list;
 				g.gameRoomAction();
 				System.out.println("");
-			} else if(list instanceof SweetHome) { // Å¬·¡½º SweetHome: ÀÌ¸§, ID, ÁÖ¼Ò, °¡°İÀÌ ÀúÀåµÈ Å¬·¡½º
-				System.out.print("ÀÌ¸§Àº " + list.getOwnerName() + "ÀÌ°í ¹øÈ£´Â " + list.getOwnerID() + "ÀÔ´Ï´Ù. " + "»ç´Â °÷Àº " + list.getHomeAddress() + "ÀÌ¸ç Áı °ªÀº " + list.getHousePrice() + "¾ï¿ø ÀÔ´Ï´Ù.\n");
+			} else if(list instanceof SweetHome) { // í´ë˜ìŠ¤ SweetHome: ì´ë¦„, ID, ì£¼ì†Œ, ê°€ê²©ì´ ì €ì¥ëœ í´ë˜ìŠ¤
+				System.out.print("ì´ë¦„ì€ " + list.getOwnerName() + "ì´ê³  ë²ˆí˜¸ëŠ” " + list.getOwnerID() + "ì…ë‹ˆë‹¤. " + "ì‚¬ëŠ” ê³³ì€ " + list.getHomeAddress() + "ì´ë©° ì§‘ ê°’ì€ " + list.getHousePrice() + "ì–µì› ì…ë‹ˆë‹¤.\n");
 			} else {
-				System.out.println("¾Ë¼ö ¾ø´Â ¿À·ùÀÔ´Ï´Ù.");
+				System.out.println("ì•Œìˆ˜ ì—†ëŠ” ì˜¤ë¥˜ì…ë‹ˆë‹¤.");
 			}
 		}
 		
 		System.out.println("======================================================================================================");
 		
-		// if(list instanceof SweetHome) <= ÀÌ³ğÀÌ ¸Ç ¾Õ¿¡ ¿ÀÁö ¾Ê°Ô ÇÏÀÚ. ¸Ç ³¡¿¡ ¿À°Ô ÇÏÀÚ!!! ÀÌÀ¯´Â??
-		// ±×¸®°í Çüº¯È¯Àº ºÎ¸ğ¿Í ÀÚ¼Õ°£ÀÇ °ü°è¿¡¼­¸¸ °¡´ÉÇÏ´Ù.
-		System.out.println("ºÎ¸ğ Å¬·¡½º°¡ ¸Ç ¾Õ¿¡ ÀÖÀ» ¶§ ´Ù¿î Ä³½ºÆÃ! À§¿¡¼­ ½ÇÇàÇÑ °á°ú¿Í Áö±İ °á°ú ºñ±³ÇØ º¸ÀÚ! ¿Ö ÀÌ·²±î???");
+		// if(list instanceof SweetHome) <= ì´ë†ˆì´ ë§¨ ì•ì— ì˜¤ì§€ ì•Šê²Œ í•˜ì. ë§¨ ëì— ì˜¤ê²Œ í•˜ì!!! ì´ìœ ëŠ”??
+		// ê·¸ë¦¬ê³  í˜•ë³€í™˜ì€ ë¶€ëª¨ì™€ ìì†ê°„ì˜ ê´€ê³„ì—ì„œë§Œ ê°€ëŠ¥í•˜ë‹¤.
+		System.out.println("ë¶€ëª¨ í´ë˜ìŠ¤ê°€ ë§¨ ì•ì— ìˆì„ ë•Œ ë‹¤ìš´ ìºìŠ¤íŒ…! ìœ„ì—ì„œ ì‹¤í–‰í•œ ê²°ê³¼ì™€ ì§€ê¸ˆ ê²°ê³¼ ë¹„êµí•´ ë³´ì! ì™œ ì´ëŸ´ê¹Œ???");
 		System.out.println("======================================================================================================");
 		for(int i = 0; i < shList.size(); i++) {
 			SweetHome list = shList.get(i);
-			if(list instanceof SweetHome) { // listÀÇ ¼Ó¼ºÅ¸ÀÔ SweetHomeÀÌ¸é .........
-				System.out.print("ÀÌ¸§Àº " + list.getOwnerName() + "ÀÌ°í ¹øÈ£´Â " + list.getOwnerID() + "ÀÔ´Ï´Ù. " + "»ç´Â °÷Àº " + list.getHomeAddress() + "ÀÌ¸ç Áı °ªÀº " + list.getHousePrice() + "¾ï¿ø ÀÔ´Ï´Ù.\n");
-			} else if(list instanceof BedRoom) { // ÀÌ°Ç SweetHomeÀÇ System.out.print("ÀÌ¸§Àº " + list.getOwnerName()....);ÀÌ ½ÇÇà‰ç´Ù´Â°Çµ¥.. 
+			if(list instanceof SweetHome) { // listì˜ ì†ì„±íƒ€ì… SweetHomeì´ë©´ .........
+				System.out.print("ì´ë¦„ì€ " + list.getOwnerName() + "ì´ê³  ë²ˆí˜¸ëŠ” " + list.getOwnerID() + "ì…ë‹ˆë‹¤. " + "ì‚¬ëŠ” ê³³ì€ " + list.getHomeAddress() + "ì´ë©° ì§‘ ê°’ì€ " + list.getHousePrice() + "ì–µì› ì…ë‹ˆë‹¤.\n");
+			} else if(list instanceof BedRoom) { // ì´ê±´ SweetHomeì˜ System.out.print("ì´ë¦„ì€ " + list.getOwnerName()....);ì´ ì‹¤í–‰Â‰æ¦®å‹Ÿì§¸í’©?. 
 				BedRoom b = (BedRoom)list;
 				b.bedRoomAction();
-			} else if(list instanceof DressRoom) { // ÀÌ°Ç SweetHomeÀÇ System.out.print("ÀÌ¸§Àº " + list.getOwnerName()....);ÀÌ ½ÇÇà‰ç´Ù´Â°Çµ¥..
+			} else if(list instanceof DressRoom) { // ì´ê±´ SweetHomeì˜ System.out.print("ì´ë¦„ì€ " + list.getOwnerName()....);ì´ ì‹¤í–‰Â‰æ¦®å‹Ÿì§¸í’©?.
 				DressRoom d = (DressRoom)list;
 				d.dressRommAction();
-			} else if(list instanceof Kitchen) { // ÀÌ°Ç SweetHomeÀÇ System.out.print("ÀÌ¸§Àº " + list.getOwnerName()....);ÀÌ ½ÇÇà‰ç´Ù´Â°Çµ¥..
+			} else if(list instanceof Kitchen) { // ì´ê±´ SweetHomeì˜ System.out.print("ì´ë¦„ì€ " + list.getOwnerName()....);ì´ ì‹¤í–‰Â‰æ¦®å‹Ÿì§¸í’©?.
 				Kitchen k = (Kitchen)list;
 				k.kitchenAction();
-			} else if(list instanceof StudyRoom) { // ÀÌ°Ç SweetHomeÀÇ System.out.print("ÀÌ¸§Àº " + list.getOwnerName()....);ÀÌ ½ÇÇà‰ç´Ù´Â°Çµ¥..
+			} else if(list instanceof StudyRoom) { // ì´ê±´ SweetHomeì˜ System.out.print("ì´ë¦„ì€ " + list.getOwnerName()....);ì´ ì‹¤í–‰Â‰æ¦®å‹Ÿì§¸í’©?.
 				StudyRoom s = (StudyRoom)list;
 				s.studyRoomAction();
-			} else if(list instanceof GameRoom) { // ÀÌ°Ç SweetHomeÀÇ System.out.print("ÀÌ¸§Àº " + list.getOwnerName()....);ÀÌ ½ÇÇà‰ç´Ù´Â°Çµ¥..
+			} else if(list instanceof GameRoom) { // ì´ê±´ SweetHomeì˜ System.out.print("ì´ë¦„ì€ " + list.getOwnerName()....);ì´ ì‹¤í–‰Â‰æ¦®å‹Ÿì§¸í’©?.
 				GameRoom g = (GameRoom)list;
 				g.gameRoomAction();
 				System.out.println("");
 			} else {
-				System.out.println("¾Ë¼ö ¾ø´Â ¿À·ùÀÔ´Ï´Ù.");
+				System.out.println("ì•Œìˆ˜ ì—†ëŠ” ì˜¤ë¥˜ì…ë‹ˆë‹¤.");
 			}
 		} 
-		// °á±¹ ÀÌ°ÍÀº ÀÚ¹Ù¿¡¼­ if ¹®ÀÇ Æ¯Â¡À» º¸¿©ÁÖ´Â °ÍÀÌ´Ù. ¸Ç Ã³À½, È¤Àº ¸Ç À§ÀÇ Á¶°Ç¹®À»
-		// ¸¸Á·ÇÏ¸é(true) ´ÙÀ½ Á¶°Ç¹®Àº ½ÇÇà ¾ÈÇÏ°í if¹®À» ºüÁ® ³ª¿Â´Ù.
-		// ±×¸®°í À§¿¡ ÀÖ´Â Á¶°Ç¹® "if(list instanceof SweetHome) {...."ÀÌ list°¡ ¹«¾ùÀÌµç »ó°ü¾øÀÌ Ç×»ó
-		//  trueÀÎ °ÍÀº BedRoom, Kitchen, DressRoom, StudyRoom, GameRoom µî ÀÚ½Ä Å¬·¡½º ¸ğµÎ°¡ 
-		// ºÎ¸ğÀÎ SweetHome Å¬·¡½º¸¦ »ó¼ÓÇÏ°í ÀÖ±â¿¡ ´ç¿¬È÷ ÀÚ½Ä Å¬·¡½ºµé ¸ğµÎ´Â 
-		// SweetHomeÀÇ ¼Ó¼ºÀ» °¡Áö°í ÀÖ´Ù. ±×·¡¼­ list instanceof SweetHome) {....¸¦ ¸Ç ¾Æ·¡¿¡ À§Ä¡ÇÏ°Ô ÇÑ´Ù.
+		// ê²°êµ­ ì´ê²ƒì€ ìë°”ì—ì„œ if ë¬¸ì˜ íŠ¹ì§•ì„ ë³´ì—¬ì£¼ëŠ” ê²ƒì´ë‹¤. ë§¨ ì²˜ìŒ, í˜¹ì€ ë§¨ ìœ„ì˜ ì¡°ê±´ë¬¸ì„
+		// ë§Œì¡±í•˜ë©´(true) ë‹¤ìŒ ì¡°ê±´ë¬¸ì€ ì‹¤í–‰ ì•ˆí•˜ê³  ifë¬¸ì„ ë¹ ì ¸ ë‚˜ì˜¨ë‹¤.
+		// ê·¸ë¦¬ê³  ìœ„ì— ìˆëŠ” ì¡°ê±´ë¬¸ "if(list instanceof SweetHome) {...."ì´ listê°€ ë¬´ì—‡ì´ë“  ìƒê´€ì—†ì´ í•­ìƒ
+		//  trueì¸ ê²ƒì€ BedRoom, Kitchen, DressRoom, StudyRoom, GameRoom ë“± ìì‹ í´ë˜ìŠ¤ ëª¨ë‘ê°€ 
+		// ë¶€ëª¨ì¸ SweetHome í´ë˜ìŠ¤ë¥¼ ìƒì†í•˜ê³  ìˆê¸°ì— ë‹¹ì—°íˆ ìì‹ í´ë˜ìŠ¤ë“¤ ëª¨ë‘ëŠ” 
+		// SweetHomeì˜ ì†ì„±ì„ ê°€ì§€ê³  ìˆë‹¤. ê·¸ë˜ì„œ list instanceof SweetHome) {....ë¥¼ ë§¨ ì•„ë˜ì— ìœ„ì¹˜í•˜ê²Œ í•œë‹¤.
 
 		
 //		bedroom.homeAction(4);

@@ -1,44 +1,44 @@
-// Áı°ú °ü·ÃµÇ °ÍµéÀ» »ó¼Ó°ú ´ÙÇü¼º, ArrayList, ´Ù¿î Ä³½ºÆÃÀ» ÀÌ¿ëÇÏ¿© Ç¥ÇöÇÒ °Í.
-// ºÎ¸ğ Å¬·¡½º(SweetHome)´Â ¸â¹ö º¯¼öName, ID, Address, HousePrice.
-// ÀÚ½Ä Å¬·¡½º´Â BedRoom(ÀÏ¾î³­´Ù), Kitchen(¿ä¸®, ¼³°ÅÁö, ½Ä»ç), DressRoom(»¡·¡, ¸»¸®´Â),
-// StudyRoom(°øºÎ, ¿µÈ­), GameRoom(°ÔÀÓ)À¸·Î ±¸¼º
-// ÀÚ½Ä Å¬·¡½º´Â ¿À´Ã ÇÒ ÀÏÀ» ±¸¼ºÇÏ´Âµ¥ ºÎ¸ğ ÀÚ½Ä¿¡ ÀÖ´Â ¸â¹öº¯¼ö¸¦ »ç¿ëÇÏ°í, homeAction() ¸Ş¼Òµå¸¦ ¿À¹ö¶óÀÌµù(¿À¹ö·Îµù ¾Æ´Ô) ÇÒ °Í.
-// ÀÏ¾î³ª¼­, ¹ä ¸Ô°í, ¿Ê °¥¾ÆÀÔ°í, °øºÎÇÏ°í, ³í´Ù.(BedRoom, Kitchen, DressRoom, SturyRoom, GameRoom)
-// ÇÒ ÀÏµé¿¡ ´ëÇÑ ±¸¼ºÀº »ç¶÷¸¶´Ù Æ²¸®¹Ç·Î ArrayList¿¡ ÀúÀåÇÑ´Ù.(¸¸µé¾úÁö¸¸ ÀÇµµ¿¡ Á¤È®ÇÏ°Ô ¸ÂÁö ¾Ê¾Ò´Ù.)
-// ´Ù¿î Ä³½ºÆÃÀ» ±¸ÇöÇÒ ¼ö ÀÖµµ·Ï ÀÚ½Ä Å¬·¡½º¿¡ ´Ù¸¥ ¸Ş¼Òµå¸¦ ¸¸µé¾î ´Ù¿î Ä³½ºÆÃÀ¸·Î È£ÃâÇÒ °Í.
+// ì§‘ê³¼ ê´€ë ¨ë˜ ê²ƒë“¤ì„ ìƒì†ê³¼ ë‹¤í˜•ì„±, ArrayList, ë‹¤ìš´ ìºìŠ¤íŒ…ì„ ì´ìš©í•˜ì—¬ í‘œí˜„í•  ê²ƒ.
+// ë¶€ëª¨ í´ë˜ìŠ¤(SweetHome)ëŠ” ë©¤ë²„ ë³€ìˆ˜Name, ID, Address, HousePrice.
+// ìì‹ í´ë˜ìŠ¤ëŠ” BedRoom(ì¼ì–´ë‚œë‹¤), Kitchen(ìš”ë¦¬, ì„¤ê±°ì§€, ì‹ì‚¬), DressRoom(ë¹¨ë˜, ë§ë¦¬ëŠ”),
+// StudyRoom(ê³µë¶€, ì˜í™”), GameRoom(ê²Œì„)ìœ¼ë¡œ êµ¬ì„±
+// ìì‹ í´ë˜ìŠ¤ëŠ” ì˜¤ëŠ˜ í•  ì¼ì„ êµ¬ì„±í•˜ëŠ”ë° ë¶€ëª¨ ìì‹ì— ìˆëŠ” ë©¤ë²„ë³€ìˆ˜ë¥¼ ì‚¬ìš©í•˜ê³ , homeAction() ë©”ì†Œë“œë¥¼ ì˜¤ë²„ë¼ì´ë”©(ì˜¤ë²„ë¡œë”© ì•„ë‹˜) í•  ê²ƒ.
+// ì¼ì–´ë‚˜ì„œ, ë°¥ ë¨¹ê³ , ì˜· ê°ˆì•„ì…ê³ , ê³µë¶€í•˜ê³ , ë…¼ë‹¤.(BedRoom, Kitchen, DressRoom, SturyRoom, GameRoom)
+// í•  ì¼ë“¤ì— ëŒ€í•œ êµ¬ì„±ì€ ì‚¬ëŒë§ˆë‹¤ í‹€ë¦¬ë¯€ë¡œ ArrayListì— ì €ì¥í•œë‹¤.(ë§Œë“¤ì—ˆì§€ë§Œ ì˜ë„ì— ì •í™•í•˜ê²Œ ë§ì§€ ì•Šì•˜ë‹¤.)
+// ë‹¤ìš´ ìºìŠ¤íŒ…ì„ êµ¬í˜„í•  ìˆ˜ ìˆë„ë¡ ìì‹ í´ë˜ìŠ¤ì— ë‹¤ë¥¸ ë©”ì†Œë“œë¥¼ ë§Œë“¤ì–´ ë‹¤ìš´ ìºìŠ¤íŒ…ìœ¼ë¡œ í˜¸ì¶œí•  ê²ƒ.
 public class SweetHome {
 	
-	private String ownerName;	// Áı ¼ÒÀ¯ÀÚ
-	private int ownerID;	// ¼ÒÀ¯ÀÚ °íÀ¯¹øÈ£
-	private String homeAddress;	// Áı ÁÖ¼Ò
-	private int housePrice;	// Áı °¡°İ
+	private String ownerName;	// ì§‘ ì†Œìœ ì
+	private int ownerID;	// ì†Œìœ ì ê³ ìœ ë²ˆí˜¸
+	private String homeAddress;	// ì§‘ ì£¼ì†Œ
+	private int housePrice;	// ì§‘ ê°€ê²©
 	
 	public SweetHome() {
-		// ºó »ı¼ºÀÚ(empty constructor)°¡ ¾øÀÌ ÀÚ½Ä Å¬·¡½º¸¦ È£ÃâÇÏ´Ï(a = new BedRoom() ÀÌ·±°Å..) ¿¡·¯¸¦ ³½´Ù. 
-		// ²À ¸¸µéÀÚ!
+		// ë¹ˆ ìƒì„±ì(empty constructor)ê°€ ì—†ì´ ìì‹ í´ë˜ìŠ¤ë¥¼ í˜¸ì¶œí•˜ë‹ˆ(a = new BedRoom() ì´ëŸ°ê±°..) ì—ëŸ¬ë¥¼ ë‚¸ë‹¤. 
+		// ê¼­ ë§Œë“¤ì!
 		// Implicit super constructor SweetHome() is undefined for default constructor. 
 		// Must define an explicit constructor
 		
 	}
 	
-	public SweetHome(String ownerName, int ownerID, String homeAddress, int housePrice) {	// °³,¼Òµµ ¾Æ´Â ¸Å°³ º¯¼ö°¡ ³×°³ÀÎ »ı¼ºÀÚ
+	public SweetHome(String ownerName, int ownerID, String homeAddress, int housePrice) {	// ê°œ,ì†Œë„ ì•„ëŠ” ë§¤ê°œ ë³€ìˆ˜ê°€ ë„¤ê°œì¸ ìƒì„±ì
 		this.ownerName = ownerName;
 		this.ownerID = ownerID;
 		this.homeAddress = homeAddress;
 		this.housePrice = housePrice;
 	}
 	
-	// ¿À¹ö·ÎµùÀÇ Á¤ÀÇ´Â ÀÚ¹ÙÀÇ ÇÑ Å¬·¡½º ³»¿¡ ÀÌ¹Ì »ç¿ëÇÏ·Á´Â ÀÌ¸§°ú °°Àº ÀÌ¸§À» °¡Áø ¸Ş¼Òµå°¡ ÀÖ´õ¶óµµ ¸Å°³º¯¼öÀÇ °³¼ö ¶Ç´Â Å¸ÀÔÀÌ ´Ù¸£¸é, °°Àº ÀÌ¸§À» »ç¿ëÇØ¼­ ¸Ş¼Òµå¸¦ Á¤ÀÇÇÒ ¼ö ÀÖ´Ù.
-	// ¿À¹ö¶óÀÌµùÀº ºÎ¸ğ Å¬·¡½º·ÎºÎÅÍ »ó¼Ó¹ŞÀº ¸Ş¼Òµå¸¦ ÀÚ½Ä Å¬·¡½º¿¡¼­ ÀçÁ¤ÀÇÇÏ´Â °ÍÀÌ¶ó°í ÇÑ´Ù.
-	public void homeAction(int i) { // ÀÚ½Ä Å¬·¡½º¿¡¼­ ÀÌ ¸Ş¼Òµå¸¦ ¿À¹ö¶óÀÌµùÇÑ´Ù. ÀÌ¸§°ú ¸Å°³º¯¼ö°¡ °°¾Æ¾ß ÇÑ´Ù.
-		System.out.println("SweetHome¿¡¼­ homeAction()ÀÌ È£ÃâµÇ¾ú½À´Ï´Ù.");
+	// ì˜¤ë²„ë¡œë”©ì˜ ì •ì˜ëŠ” ìë°”ì˜ í•œ í´ë˜ìŠ¤ ë‚´ì— ì´ë¯¸ ì‚¬ìš©í•˜ë ¤ëŠ” ì´ë¦„ê³¼ ê°™ì€ ì´ë¦„ì„ ê°€ì§„ ë©”ì†Œë“œê°€ ìˆë”ë¼ë„ ë§¤ê°œë³€ìˆ˜ì˜ ê°œìˆ˜ ë˜ëŠ” íƒ€ì…ì´ ë‹¤ë¥´ë©´, ê°™ì€ ì´ë¦„ì„ ì‚¬ìš©í•´ì„œ ë©”ì†Œë“œë¥¼ ì •ì˜í•  ìˆ˜ ìˆë‹¤.
+	// ì˜¤ë²„ë¼ì´ë”©ì€ ë¶€ëª¨ í´ë˜ìŠ¤ë¡œë¶€í„° ìƒì†ë°›ì€ ë©”ì†Œë“œë¥¼ ìì‹ í´ë˜ìŠ¤ì—ì„œ ì¬ì •ì˜í•˜ëŠ” ê²ƒì´ë¼ê³  í•œë‹¤.
+	public void homeAction(int i) { // ìì‹ í´ë˜ìŠ¤ì—ì„œ ì´ ë©”ì†Œë“œë¥¼ ì˜¤ë²„ë¼ì´ë”©í•œë‹¤. ì´ë¦„ê³¼ ë§¤ê°œë³€ìˆ˜ê°€ ê°™ì•„ì•¼ í•œë‹¤.
+		System.out.println("SweetHomeì—ì„œ homeAction()ì´ í˜¸ì¶œë˜ì—ˆìŠµë‹ˆë‹¤.");
 	}
 	
 	public void taxHouse () {
-		System.out.println("¼¼±İÀº " + this.getHousePrice()*0.0001*100000000 + "¿ø ÀÔ´Ï´Ù.") ;
+		System.out.println("ì„¸ê¸ˆì€ " + this.getHousePrice()*0.0001*100000000 + "ì› ì…ë‹ˆë‹¤.") ;
 	}
 
-	// ÀÏ´Ü set, getÀ» ¼ÂÆÃÇÏ°í¿ä
+	// ì¼ë‹¨ set, getì„ ì…‹íŒ…í•˜ê³ ìš”
 	public void setOwnerName(String ownerName) {
 		this.ownerName = ownerName;
 	}
@@ -73,116 +73,116 @@ public class SweetHome {
 }
 
 
-// »ó¼ÓÀ» ½ÃÀÛÇÕ´Ï´Ù.
+// ìƒì†ì„ ì‹œì‘í•©ë‹ˆë‹¤.
 class BedRoom extends SweetHome {
 	
-	// ¿À¹ö¶óÀÌµù µÈ homeAction() ¸Ş¼Òµå
-	public void homeAction(int i) { // ¼ıÀÚ¸¦ ÇÑ°³ ¹Ş¾Æ¼­ ¿É¼ÇÀ» ½ÇÇàÇÏ°Ô ²û ÇÑ´Ù.
-		int selector = i;	// ºÎ¸ğ°¡ int i ÀÌ¸é ÀÚ½Äµµ int i ¿©¾ß ÇÔ.
+	// ì˜¤ë²„ë¼ì´ë”© ëœ homeAction() ë©”ì†Œë“œ
+	public void homeAction(int i) { // ìˆ«ìë¥¼ í•œê°œ ë°›ì•„ì„œ ì˜µì…˜ì„ ì‹¤í–‰í•˜ê²Œ ë” í•œë‹¤.
+		int selector = i;	// ë¶€ëª¨ê°€ int i ì´ë©´ ìì‹ë„ int i ì—¬ì•¼ í•¨.
 		if(selector == 1) {
-			System.out.println("¾ÆÄ§¿¡ ÀÏÂï ÀÏ¾î ³µ½À´Ï´Ù.");
+			System.out.println("ì•„ì¹¨ì— ì¼ì° ì¼ì–´ ë‚¬ìŠµë‹ˆë‹¤.");
 		} else if(selector == 2) {
-			System.out.println("¾ÆÄ§¿¡ ÀÏ¾î ³µ½À´Ï´Ù.");
+			System.out.println("ì•„ì¹¨ì— ì¼ì–´ ë‚¬ìŠµë‹ˆë‹¤.");
 		} else if (selector == 3) {
-			System.out.println("ÀÏ¾î³ªÀÚ¸¶ÀÚ È¸»ç·Î ¶Ù¾ú´Ù.");
+			System.out.println("ì¼ì–´ë‚˜ìë§ˆì íšŒì‚¬ë¡œ ë›°ì—ˆë‹¤.");
 		} else {
-			System.out.println("Àá ¾ÈÀÚ°í ¹¹ÇÑ °Ì´Ï±î?");
+			System.out.println("ì  ì•ˆìê³  ë­í•œ ê²ë‹ˆê¹Œ?");
 		}
 	}
 	
-	// ´Ù¿î Ä³½ºÆÃ Å×½ºÆ®¸¦ À§ÇÑ ÀÚ½ÄÀÇ ¸Ş¼Òµå
+	// ë‹¤ìš´ ìºìŠ¤íŒ… í…ŒìŠ¤íŠ¸ë¥¼ ìœ„í•œ ìì‹ì˜ ë©”ì†Œë“œ
 	public void bedRoomAction() { 
-		System.out.println("¿À´ÃÀº ÈŞÀÏÀÔ´Ï´Ù.");
+		System.out.println("ì˜¤ëŠ˜ì€ íœ´ì¼ì…ë‹ˆë‹¤.");
 	}
 }
 
 
 class Kitchen extends SweetHome {
 	
-	// ¿À¹ö¶óÀÌµù µÈ homeAction() ¸Ş¼Òµå
+	// ì˜¤ë²„ë¼ì´ë”© ëœ homeAction() ë©”ì†Œë“œ
 	public void homeAction(int i) {
 		int selector = i;
 		if(selector == 1) {
-			System.out.println("¸ÀÀÖ´Â ¿ä¸®¸¦ ÇÕ´Ï´Ù.");
+			System.out.println("ë§›ìˆëŠ” ìš”ë¦¬ë¥¼ í•©ë‹ˆë‹¤.");
 		} else if(selector == 2) {
-			System.out.println("¸ÀÀÖ´Â ¿ä¸®¸¦ ¸Ô½À´Ï´Ù.");
+			System.out.println("ë§›ìˆëŠ” ìš”ë¦¬ë¥¼ ë¨¹ìŠµë‹ˆë‹¤.");
 		} else if (selector == 3) {
-			System.out.println("¼³°ÅÁö¸¦ ÇÕ´Ï´Ù.");
+			System.out.println("ì„¤ê±°ì§€ë¥¼ í•©ë‹ˆë‹¤.");
 		} else {
-			System.out.println("¹ä ¾È¸Ô¾î?");
+			System.out.println("ë°¥ ì•ˆë¨¹ì–´?");
 		}
 	}
 	
-	// ´Ù¿î Ä³½ºÆÃ Å×½ºÆ®¸¦ À§ÇÑ ÀÚ½ÄÀÇ ¸Ş¼Òµå
+	// ë‹¤ìš´ ìºìŠ¤íŒ… í…ŒìŠ¤íŠ¸ë¥¼ ìœ„í•œ ìì‹ì˜ ë©”ì†Œë“œ
 	public void kitchenAction() {
-		System.out.println("¿À´ÃÀº ººÀ½¹äÀÔ´Ï´Ù.");
+		System.out.println("ì˜¤ëŠ˜ì€ ë³¶ìŒë°¥ì…ë‹ˆë‹¤.");
 	}
 }
 
 class DressRoom extends SweetHome {
 	
-	// ¿À¹ö¶óÀÌµù µÈ homeAction() ¸Ş¼Òµå
+	// ì˜¤ë²„ë¼ì´ë”© ëœ homeAction() ë©”ì†Œë“œ
 	public void homeAction(int i) {
 		int selector = i;
 		if(selector == 1) {
-			System.out.println("Á¤ÀåÀ» ÀÔ½À´Ï´Ù.");
+			System.out.println("ì •ì¥ì„ ì…ìŠµë‹ˆë‹¤.");
 		} else if(selector == 2) {
-			System.out.println("»¡·¡¸¦ ¿­½ÉÈ÷ ÇÕ´Ï´Ù.");
+			System.out.println("ë¹¨ë˜ë¥¼ ì—´ì‹¬íˆ í•©ë‹ˆë‹¤.");
 		} else if (selector == 3) {
-			System.out.println("»¡·¡¸¦ ¸»¸³´Ï´Ù.");
+			System.out.println("ë¹¨ë˜ë¥¼ ë§ë¦½ë‹ˆë‹¤.");
 		} else {
-			System.out.println("¹ş°í ³ª°¥·Á°í?");
+			System.out.println("ë²—ê³  ë‚˜ê°ˆë ¤ê³ ?");
 		}
 	}
 	
-	// ´Ù¿î Ä³½ºÆÃ Å×½ºÆ®¸¦ À§ÇÑ ÀÚ½ÄÀÇ ¸Ş¼Òµå
+	// ë‹¤ìš´ ìºìŠ¤íŒ… í…ŒìŠ¤íŠ¸ë¥¼ ìœ„í•œ ìì‹ì˜ ë©”ì†Œë“œ
 	public void dressRommAction() {
-		System.out.println("Á¤ÀåÀ¸·Î °¡ÀÚ°í!!");
+		System.out.println("ì •ì¥ìœ¼ë¡œ ê°€ìê³ !!");
 	}
 }
 
 class StudyRoom extends SweetHome {
 	
-	// ¿À¹ö¶óÀÌµù µÈ homeAction() ¸Ş¼Òµå
+	// ì˜¤ë²„ë¼ì´ë”© ëœ homeAction() ë©”ì†Œë“œ
 	public void homeAction(int i) {
 		int selector = i;
 		if(selector == 1) {
-			System.out.println("¼öÇĞÀ» 2½Ã°£ °øºÎÇÕ´Ï´Ù.");
+			System.out.println("ìˆ˜í•™ì„ 2ì‹œê°„ ê³µë¶€í•©ë‹ˆë‹¤.");
 		} else if(selector == 2) {
-			System.out.println("±¹¾î¸¦ 2½Ã°£ °øºÎÇÕ´Ï´Ù.");
+			System.out.println("êµ­ì–´ë¥¼ 2ì‹œê°„ ê³µë¶€í•©ë‹ˆë‹¤.");
 		} else if (selector == 3) {
-			System.out.println("¿µ¾î¸¦ 2½Ã°£ °øºÎÇÕ´Ï´Ù.");
+			System.out.println("ì˜ì–´ë¥¼ 2ì‹œê°„ ê³µë¶€í•©ë‹ˆë‹¤.");
 		} else if (selector == 4) {
-			System.out.println("¿µÈ­ Á¶Ä¿¸¦ º¸¾Ò½À´Ï´Ù.");
+			System.out.println("ì˜í™” ì¡°ì»¤ë¥¼ ë³´ì•˜ìŠµë‹ˆë‹¤.");
 		} else {
-			System.out.println("¾ÆÄ§¿¡ °ÔÀÓ·ë¿¡¼­ ³ª¿Ô½À´Ï´Ù!!");
+			System.out.println("ì•„ì¹¨ì— ê²Œì„ë£¸ì—ì„œ ë‚˜ì™”ìŠµë‹ˆë‹¤!!");
 		}
 	}
 	
-	// ´Ù¿î Ä³½ºÆÃ Å×½ºÆ®¸¦ À§ÇÑ ÀÚ½ÄÀÇ ¸Ş¼Òµå
+	// ë‹¤ìš´ ìºìŠ¤íŒ… í…ŒìŠ¤íŠ¸ë¥¼ ìœ„í•œ ìì‹ì˜ ë©”ì†Œë“œ
 	public void studyRoomAction() {
-		System.out.println("½Ò¸ÔÃæ µÇ´Â°Ô ÁÁÀ»±î¿ä?");
+		System.out.println("ìŒ€ë¨¹ì¶© ë˜ëŠ”ê²Œ ì¢‹ì„ê¹Œìš”?");
 	}
 }
 
 class GameRoom extends SweetHome {
 	
-	// ¿À¹ö¶óÀÌµù µÈ homeAction() ¸Ş¼Òµå
+	// ì˜¤ë²„ë¼ì´ë”© ëœ homeAction() ë©”ì†Œë“œ
 	public void homeAction(int i) {
 		int selector = i;
 		if(selector == 1) {
-			System.out.println("+9 ÁıÇà°ËÀ» ÆÈ¾Æ¼­ 2Ãµ¸¸¿øÀ» ¹ú¾ú½À´Ï´Ù.");
+			System.out.println("+9 ì§‘í–‰ê²€ì„ íŒ”ì•„ì„œ 2ì²œë§Œì›ì„ ë²Œì—ˆìŠµë‹ˆë‹¤.");
 		} else if(selector == 2) {
-			System.out.println("¸Ş¼Ò¸¦ ÆÈ¾Æ¼­ 1¸¸¿øÀ» ¹ú¾ú½À´Ï´Ù.");
+			System.out.println("ë©”ì†Œë¥¼ íŒ”ì•„ì„œ 1ë§Œì›ì„ ë²Œì—ˆìŠµë‹ˆë‹¤.");
 		} else if (selector == 3) {
-			System.out.println("µğ¾Æ2¸®Àú ¾ÆÀÌÅÛÀ» 30¸¸¿ø¿¡ ÆÈ¾Ò½À´Ï´Ù.");
+			System.out.println("ë””ì•„2ë¦¬ì € ì•„ì´í…œì„ 30ë§Œì›ì— íŒ”ì•˜ìŠµë‹ˆë‹¤.");
 		} else {
-			System.out.println("ÀÎ»ıÀº ÇÑ¹æÀÔ´Ï´Ù.");
+			System.out.println("ì¸ìƒì€ í•œë°©ì…ë‹ˆë‹¤.");
 		}
 	}
 	
-	// ´Ù¿î Ä³½ºÆÃ Å×½ºÆ®¸¦ À§ÇÑ ÀÚ½ÄÀÇ ¸Ş¼Òµå
+	// ë‹¤ìš´ ìºìŠ¤íŒ… í…ŒìŠ¤íŠ¸ë¥¼ ìœ„í•œ ìì‹ì˜ ë©”ì†Œë“œ
 	public void gameRoomAction() {
-		System.out.println("½Ò¸ÔÃæÀÌ Àû¼ºÀÌ±º¿ä!!!!");
+		System.out.println("ìŒ€ë¨¹ì¶©ì´ ì ì„±ì´êµ°ìš”!!!!");
 	}
 }
